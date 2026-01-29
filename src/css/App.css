@@ -1,0 +1,43 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #333333;
+
+}
+
+a
+{
+    text-decoration: none;
+
+}
+
+ul
+{
+    list-style: none;
+
+}
+
+img
+{
+    display: block;
+    max-width: 100%;
+
+}
+
+button, input
+{
+    display: block;
+    font-size: 1rem;
+
+}
+
+.container
+{
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: 0px auto;
+
+}
