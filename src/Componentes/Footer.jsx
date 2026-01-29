@@ -4,7 +4,7 @@ import estilos from "../css/Footer.module.css";
 
 function Footer()
 {
-    return <footer class="container">
+    return <footer>
 
     </footer>
 
