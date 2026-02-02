@@ -1,0 +1,27 @@
+.botao
+{
+    min-width: 100px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    color: #442200;
+    background: #ffbb11;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s;
+
+}
+
+.botao:hover, .botao:focus
+{
+    box-shadow: 0px 0px 0px 2px #ffeeaa, 0px 0px 0px 3px #ffbb11;
+    outline: none;
+
+}
+
+.botao:disabled
+{
+    opacity: 0.6;
+    cursor: wait;
+
+}

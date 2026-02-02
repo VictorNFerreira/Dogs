@@ -1,9 +1,12 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
+import Input from "../Forms/Input";
+import Button from "../Forms/Button";
+
 function LoginForm()
 {
-    const [nome, setNome] = React.useState("");
+    const [usuario, setUsuario] = React.useState("");
     const [senha, setSenha] = React.useState("");
 
     function handleSubmit(event)
@@ -17,7 +20,7 @@ function LoginForm()
                 "Content-Type": "application/json"
 
             },
-            body: JSON.stringify({nome, senha})
+            body: JSON.stringify({usuario, senha})
             
         }).then((result) =>
             {
@@ -32,10 +35,13 @@ function LoginForm()
         <h1>Login</h1>
 
         <form action="" onSubmit={handleSubmit}>
-            <input type="text" value={nome} onChange={(event) => setNome(event.target.value)}></input>
-            <input type="password" value={senha} onChange={(event) => setSenha(event.target.value)}></input>
+            <Input label="Usuário" type="text" name="usuario"/>
+            <Input label="Senha" type="password" name="senha"/>
 
-            <button>Entrar</button>
+            <Button>Entrar</Button>
+
+            {/*<input type="text" value={usuario} onChange={(event) => setUsuario(event.target.value)}></input>
+            <input type="password" value={senha} onChange={(event) => setSenha(event.target.value)}></input>*/}
         </form>
         <Link to="/login/cadastro">Criar</Link>
     </section>
