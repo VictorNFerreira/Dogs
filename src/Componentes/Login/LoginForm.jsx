@@ -3,31 +3,36 @@ import {Link} from "react-router-dom";
 
 import Input from "../Forms/Input";
 import Button from "../Forms/Button";
+import useForm from "../../Hooks/useForm";
 
 function LoginForm()
 {
-    const [usuario, setUsuario] = React.useState("");
-    const [senha, setSenha] = React.useState("");
+    const usuario = useForm();
+    const senha = useForm();
 
     function handleSubmit(event)
     {
         event.preventDefault();
-        fetch("https://dogsapi.origamid.dev/json/jwt-auth/v1/token",
+        if(usuario.validar() && senha.validar())
         {
-            method: "POST",
-            headers:
+            fetch("https://dogsapi.origamid.dev/json/jwt-auth/v1/token",
             {
-                "Content-Type": "application/json"
+                method: "POST",
+                headers:
+                {
+                    "Content-Type": "application/json"
 
-            },
-            body: JSON.stringify({usuario, senha})
-            
-        }).then((result) =>
+                },
+                body: JSON.stringify({usuario, senha})
+                
+            }).then((result) =>
             {
-                console.log(result)
-                return result.json()
-            
+                console.log(result);
+                return result.json();
+                
             }).then((dados) => console.log(dados));
+
+        }
 
     }
 
@@ -35,13 +40,10 @@ function LoginForm()
         <h1>Login</h1>
 
         <form action="" onSubmit={handleSubmit}>
-            <Input label="Usuário" type="text" name="usuario"/>
-            <Input label="Senha" type="password" name="senha"/>
+            <Input label="Usuário" type="text" name="usuario" {...usuario}/>
+            <Input label="Senha" type="password" name="senha" {...senha}/>
 
             <Button>Entrar</Button>
-
-            {/*<input type="text" value={usuario} onChange={(event) => setUsuario(event.target.value)}></input>
-            <input type="password" value={senha} onChange={(event) => setSenha(event.target.value)}></input>*/}
         </form>
         <Link to="/login/cadastro">Criar</Link>
     </section>
