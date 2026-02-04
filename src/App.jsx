@@ -5,20 +5,23 @@ import Header from "./Componentes/Header";
 import Home from "./Componentes/Home";
 import Login from "./Componentes/Login/Login";
 import Footer from "./Componentes/Footer";
+import {UserStorage} from "./UserContext";
 
 import "./css/App.css";
 
 function App()
 {
     return <BrowserRouter>
-        <Header/>
+        <UserStorage>
+            <Header/>
 
-        <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/login/*" element={<Login/>}/>
-        </Routes>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/login/*" element={<Login/>}/>
+            </Routes>
 
-        <Footer/>
+            <Footer/>
+        </UserStorage>
     </BrowserRouter>
 
 }

@@ -15,7 +15,7 @@ function useForm(tipo)
         },
 
 
-    }
+    };
 
     function validar(valor)
     {
