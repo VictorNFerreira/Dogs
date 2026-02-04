@@ -34,7 +34,7 @@ function LoginForm()
         event.preventDefault();
         if(usuario.validar() && senha.validar())
         {
-            const {url, options} = TOKEN_POST({username: usuario.value, password: senha.value});
+            const {url, options} = TOKEN_POST({username: usuario.valor, password: senha.valor});
 
             const result = await fetch(url, options);
             const dados = await result.json();
