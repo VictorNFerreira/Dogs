@@ -7,6 +7,8 @@ import LoginPerdeuSenha from "./LoginPerdeuSenha";
 import LoginRedefinirSenha from "./LoginRedefinirSenha";
 import {UserContext} from "../../UserContext";
 
+import "../../css/App.css";
+
 function Login()
 {
     const {login} = React.useContext(UserContext);
