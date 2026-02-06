@@ -43,7 +43,6 @@ function LoginForm()
             <p>Não possui conta? Cadastre-se no nosso site.</p>
             <Link class={estilos.cadastroBotao} to="/login/cadastro">Criar</Link>
         </div>
-        
     </section>
 
 }

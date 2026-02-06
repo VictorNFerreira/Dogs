@@ -7,7 +7,7 @@ import LoginPerdeuSenha from "./LoginPerdeuSenha";
 import LoginRedefinirSenha from "./LoginRedefinirSenha";
 import {UserContext} from "../../UserContext";
 
-import "../../css/App.css";
+import estilos from "../../css/login/login.module.css";
 
 function Login()
 {
@@ -17,13 +17,15 @@ function Login()
     if(login)
         navigate("/conta");
 
-    return <main class="container">
-        <Routes>
-            <Route path="/" element={<LoginForm/>}/>
-            <Route path="cadastro" element={<LoginCadastro/>}/>
-            <Route path="recuperacao" element={<LoginPerdeuSenha/>}/>
-            <Route path="redefinicao" element={<LoginRedefinirSenha/>}/>
-        </Routes>
+    return <main class={estilos.login}>
+        <div class={estilos.forms}>
+            <Routes>
+                <Route path="/" element={<LoginForm/>}/>
+                <Route path="cadastro" element={<LoginCadastro/>}/>
+                <Route path="recuperacao" element={<LoginPerdeuSenha/>}/>
+                <Route path="redefinicao" element={<LoginRedefinirSenha/>}/>
+            </Routes>
+        </div>
     </main>
 
 }
