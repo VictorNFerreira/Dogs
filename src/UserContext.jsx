@@ -44,6 +44,8 @@ export function UserStorage(props)
                 }
 
             }
+            else
+                setLogin(false);
 
         }
 
