@@ -21,7 +21,7 @@ function LoginForm()
     {
         event.preventDefault();
         if(usuario.validar() && senha.validar())
-            usuarioLogin({username: usuario.valor, password: senha.valor});
+            await usuarioLogin({username: usuario.valor, password: senha.valor});
 
     }
 

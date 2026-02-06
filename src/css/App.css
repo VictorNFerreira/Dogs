@@ -68,8 +68,8 @@ button, input
     background: #ffbb11;
     border-radius: 3px;
     position: absolute;
-    bottom: 5px;
-    left: -5px;
+    bottom: 8px;
+    left: -2px;
     z-index: -1;
 
 }
