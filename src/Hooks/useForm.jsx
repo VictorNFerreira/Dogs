@@ -16,7 +16,7 @@ function useForm(tipo)
         senha:
         {
             regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
-            mensagem: "Sua senha precisa conter no mínimo 1 caractér maiúsculo, 1 caractér minúsculo, 1 dígito, e ter no mínimo 8 caractéres"
+            mensagem: "Sua senha precisa conter no mínimo 1 caractére maiúsculo, 1 caractére minúsculo, 1 dígito, e ter no mínimo 8 caractéres"
 
         },
 

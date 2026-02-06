@@ -5,8 +5,10 @@ import Input from "../Forms/Input";
 import Button from "../Forms/Button";
 import {USER_POST} from "../../api";
 import {UserContext} from "../../UserContext";
+import useFetch from "../../Hooks/useFetch";
 
 import "../../css/App.css";
+import Erro from "../Erro";
 
 function LoginCadastro()
 {
@@ -15,6 +17,7 @@ function LoginCadastro()
     const senha = useForm("senha");
 
     const {usuarioLogin} = React.useContext(UserContext)
+    const {loading, erro, request} = useFetch();
 
     async function handleSubmit(event)
     {
@@ -22,7 +25,7 @@ function LoginCadastro()
         if(usuario.validar() && email.validar() && senha.validar())
         {
             const {url, options} = USER_POST({username: usuario.valor, email: email.valor, password: senha.valor});
-            const result = await fetch(url, options);
+            const {result} = await request(url, options);
             if(result.ok)
                 await usuarioLogin({username: usuario.valor, password: senha.valor});
 
@@ -38,7 +41,8 @@ function LoginCadastro()
             <Input label="Email" type="email" name="email" {...email}/>
             <Input label="Senha" type="password" name="senha" {...senha}/>
 
-            <Button>Criar</Button>
+            {loading ? <Button disabled>Carregando...</Button> : <Button>Criar</Button>}
+            {erro ? <Erro erro={erro}/> : ""}
         </form>
     </section>
 
