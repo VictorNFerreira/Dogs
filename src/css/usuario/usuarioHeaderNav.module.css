@@ -1,0 +1,78 @@
+.nav
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+
+}
+
+.nav ul
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1/4;
+    gap: 15px;
+
+}
+
+.nav ul li a
+{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    background: #eeeeee;
+    border-radius: 3px;
+    transition: 0.1s;
+    cursor: pointer;
+
+}
+
+.nav ul li a:hover, .nav ul li a:focus
+{
+    border-color: #333333;
+    background: #ffffff;
+    box-shadow: 0px 0px 0px 3px #eeeeee;
+    outline: none;
+
+}
+
+.nav ul li a:global(.active)
+{
+    border-color: #ffbb11;
+    background: #ffffff;
+    box-shadow: 0px 0px 0px 3px #ffeeaa;
+
+}
+
+.nav ul li a:global(.active) svg > *
+{
+    fill: #ffbb11;
+
+}
+
+.sair
+{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: 1px solid transparent;
+    justify-content: center;
+    align-items: center;
+    background: #eeeeee;
+    border-radius: 3px;
+    transition: 0.1s;
+    cursor: pointer;
+
+}
+
+.sair:hover, .sair:focus
+{
+    border-color: #333333;
+    background: #ffffff;
+    box-shadow: 0px 0px 0px 3px #eeeeee;
+    outline: none;
+
+}
