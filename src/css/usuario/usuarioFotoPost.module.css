@@ -1,0 +1,31 @@
+.fotoPost
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+    gap: 30px;
+
+}
+
+.imgFile
+{
+    margin-bottom: 15px;
+
+}
+
+.preview
+{
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 15px;
+
+}
+
+.preview::after
+{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+
+}
