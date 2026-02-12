@@ -1,0 +1,62 @@
+.foto
+{
+    display: grid;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.foto:nth-child(2)
+{
+    grid-column: 2/-1;
+    grid-row: span 2;
+
+}
+
+.foto img
+{
+    grid-area: 1/1;
+
+}
+
+.foto span
+{
+    display: none;
+    grid-area: 1/1;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.3);
+
+}
+
+.foto:hover span
+{
+    display: flex;
+
+}
+
+.foto span::before
+{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 10px;
+    background: url("../../assets/visualizacao.svg") no-repeat;
+
+}
+
+@media(max-width: 800px)
+{
+    .foto:nth-child(2)
+    {
+        grid-column: initial;
+        grid-row: initial;
+
+    };
+
+}

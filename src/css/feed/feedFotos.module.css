@@ -1,0 +1,19 @@
+.feed
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 15px;
+    justify-items: center;
+    gap: 15px;
+
+}
+
+@media(max-width: 800px)
+{
+    .feed
+    {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
