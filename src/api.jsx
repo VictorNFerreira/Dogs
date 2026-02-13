@@ -98,10 +98,25 @@ export function FOTO_POST(formData, token)
 
 }
 
-export function FOTO_GET({pagina, total, usuario})
+export function FOTOS_GET({pagina, total, usuario})
 {
     return {
         url: API_URL + `/api/photo/?_page=${pagina}&_total=${total}&_user=${usuario}`,
+        options:
+        {
+            method: "GET",
+            cache: "no-store",
+
+        },
+
+    };
+
+}
+
+export function FOTO_GET(id)
+{
+    return {
+        url: API_URL + `/api/photo/${id}`,
         options:
         {
             method: "GET",

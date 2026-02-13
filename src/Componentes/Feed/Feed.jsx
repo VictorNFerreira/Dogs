@@ -5,9 +5,11 @@ import FeedFotos from "./FeedFotos";
 
 function Feed()
 {
+    const [modalFoto, setModalFoto] = React.useState(null);
+
     return <section>
-        <FeedModal/>
-        <FeedFotos/>
+        {modalFoto ? <FeedModal foto={modalFoto} setModalFoto={setModalFoto}/> : ""}
+        <FeedFotos setModalFoto={setModalFoto}/>
     </section>
 
 }

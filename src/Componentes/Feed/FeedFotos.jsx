@@ -2,13 +2,13 @@ import React from "react";
 
 import FeedImagem from "./FeedImagem";
 import useFetch from "../../Hooks/useFetch";
-import {FOTO_GET} from "../../api";
+import {FOTOS_GET} from "../../api";
 import Loading from "../Loading";
 import Erro from "../Erro";
 
 import estilos from "../../css/feed/feedFotos.module.css";
 
-function FeedFotos()
+function FeedFotos({setModalFoto})
 {
     const {dados, loading, erro, request} = useFetch();
 
@@ -16,7 +16,7 @@ function FeedFotos()
     {
         async function fetchFotos()
         {
-            const {url, options} = FOTO_GET({pagina: 1, total: 6, usuario: 0});
+            const {url, options} = FOTOS_GET({pagina: 1, total: 6, usuario: 0});
             await request(url, options);
 
         }
@@ -32,7 +32,7 @@ function FeedFotos()
     if(dados)
         return <div>
             <ul class={`${estilos.feed} animaLeft`}>
-                {dados.map((dado) => <FeedImagem key={dado.id} foto={dado}/>)}
+                {dados.map((dado) => <FeedImagem key={dado.id} foto={dado} setModalFoto={setModalFoto}/>)}
             </ul>
         </div>
     return null

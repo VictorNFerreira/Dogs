@@ -2,11 +2,17 @@ import React from "react";
 
 import estilos from "../../css/feed/feedImagem.module.css";
 
-function FeedImagem({foto})
+function FeedImagem(props)
 {
-    return <li class={estilos.foto}>
-        <img src={foto.src} alt={foto.title}/>
-        <span>{foto.acessos}</span>
+    function handleClick()
+    {
+        props.setModalFoto(props.foto);
+
+    }
+
+    return <li class={estilos.foto} onClick={handleClick}>
+        <img src={props.foto.src} alt={props.foto.title}/>
+        <span>{props.foto.acessos}</span>
     </li>
 
 }
