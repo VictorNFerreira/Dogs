@@ -1,5 +1,23 @@
 .comentarios
 {
+    overflow-y: auto;
 
+}
+
+.comentariosLista
+{
+    padding: 0px 30px;
+
+}
+
+.comentariosLista li
+{
+    margin-bottom: 8px;
+
+}
+
+.autor
+{
+    font-weight: bold;
 
 }

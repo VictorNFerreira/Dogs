@@ -8,15 +8,23 @@ import estilos from "../../css/foto/fotoComentarios.module.css"
 function FotoComentarios(props)
 {
     const [comentarios, setComentarios] = React.useState(() => props.comentarios)
+    const comentariosSecao = React.useRef(null);
     const {login} = React.useContext(UserContext);
 
-    return <div>
-        <ul class={estilos.comentarios}>
+    React.useEffect(() =>
+    {
+        comentariosSecao.current.scrollTop = comentariosSecao.current.scrollHeight;
+
+    }, [comentarios]);
+
+    return <div class={estilos.comentarios} ref={comentariosSecao}>
+        <ul class={estilos.comentariosLista}>
             {comentarios.map((comentario) => <li key={comentario.comment_ID}>
-                <span>{comentario.comment_author}:</span>
+                <span class={estilos.autor}>{comentario.comment_author}:</span>
                 <p>{comentario.comment_content}</p>
             </li>)}
         </ul>
+
         {login ? <FotoComentariosForm id={props.id} setComentarios={setComentarios}/> : ""}
     </div>
 

@@ -2,9 +2,10 @@ import React from "react";
 
 import useFetch from "../../Hooks/useFetch";
 import {COMENTARIO_POST} from "../../api";
-
-import Enviar from "../../assets/enviar.svg?react";
 import Erro from "../Erro";
+
+import estilos from "../../css/foto/FotoComentariosForm.module.css";
+import Enviar from "../../assets/enviar.svg?react";
 
 function FotoComentariosForm(props)
 {
@@ -27,9 +28,9 @@ function FotoComentariosForm(props)
             
     }
 
-    return <form onSubmit={hanldeSubmit}>
-        <textarea id="comentario" name="comentario" placeholder="Comente" value={comentario} onChange={(event) => setComentario(event.target.value)}/>
-        <button><Enviar/></button>
+    return <form class={estilos.form} onSubmit={hanldeSubmit}>
+        <textarea id="comentario" class={estilos.textarea} name="comentario" placeholder="Comente" value={comentario} onChange={(event) => setComentario(event.target.value)}/>
+        <button class={estilos.botao}><Enviar/></button>
         {erro ? <Erro erro={erro}/> : ""}
     </form>
 
