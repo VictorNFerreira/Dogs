@@ -1,0 +1,20 @@
+.deletar
+{
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    font-size: 0.8rem;
+    background: #dddddd;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.1s;
+
+}
+
+.deletar:hover, .deletar:focus
+{
+    border-color: #333333;
+    background: #ffffff;
+    box-shadow: 0px 0px 0px 3px #eeeeee;
+    outline: none;
+
+}

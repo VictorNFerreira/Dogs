@@ -148,3 +148,22 @@ export function COMENTARIO_POST(id, body, token)
     };
     
 }
+
+export function FOTO_DELETE(id, token)
+{
+    return {
+        url: API_URL + `/api/photo/${id}`,
+        options:
+        {
+            method: "DELETE",
+            headers:
+            {
+                Authorization: "Bearer " + token,
+
+            },
+
+        },
+        
+    };
+    
+}

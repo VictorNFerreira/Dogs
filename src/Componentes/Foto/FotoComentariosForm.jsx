@@ -16,7 +16,7 @@ function FotoComentariosForm(props)
     {
         event.preventDefault();
 
-        const token = window.localStorage.getItem("token")
+        const token = window.localStorage.getItem("token");
         const {url, options} = COMENTARIO_POST(props.id, {comment: comentario}, token);
         const {result, dados} = await request(url, options);
         if(result.ok)

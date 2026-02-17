@@ -2,12 +2,17 @@ import React from "react";
 
 import {Link} from "react-router-dom";
 import FotoComentarios from "./FotoComentarios";
+import {UserContext} from "../../UserContext";
+import FotoDelete from "../../css/foto/FotoDelete";
 
 import "../../css/App.css"
 import estilos from "../../css/foto/fotoContent.module.css";
 
+
 function FotoContent({dados})
 {
+    const usuario = React.useContext(UserContext);
+
     return <div class={estilos.foto}>
         <div class={estilos.img}>
             <img src={dados.photo.src} alt={dados.photo.title}/>
@@ -15,7 +20,7 @@ function FotoContent({dados})
 
         <div class={estilos.detalhes}>
             <p>
-                <Link to={`/perfil/${dados.photo.author}`}>@{dados.photo.author}</Link>
+                {usuario.dados && usuario.dados.username == dados.photo.author ? <FotoDelete id={dados.photo.id}/> : <Link to={`/perfil/${dados.photo.author}`}>@{dados.photo.author}</Link>}
                 <span class={estilos.views}>{dados.photo.acessos}</span>
             </p>
 
