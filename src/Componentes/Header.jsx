@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import {UserContext} from "../UserContext";
 
 import "../css/App.css"
-import estilos from "../css/Header.module.css";
+import estilos from "../css/header.module.css";
 import Dogs from "../assets/dogs.svg?react";
 
 function Header()

@@ -4,10 +4,10 @@ import {Link} from "react-router-dom";
 import FotoComentarios from "./FotoComentarios";
 import {UserContext} from "../../UserContext";
 import FotoDelete from "./FotoDelete";
+import Imagem from "../Auxiliar/Imagem";
 
 import "../../css/App.css"
 import estilos from "../../css/foto/fotoContent.module.css";
-
 
 function FotoContent({dados})
 {
@@ -15,7 +15,7 @@ function FotoContent({dados})
 
     return <div class={estilos.foto}>
         <div class={estilos.img}>
-            <img src={dados.photo.src} alt={dados.photo.title}/>
+            <Imagem src={dados.photo.src} alt={dados.photo.title}/>
         </div>
 
         <div class={estilos.detalhes}>
