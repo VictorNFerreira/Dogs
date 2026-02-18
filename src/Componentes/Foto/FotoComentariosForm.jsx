@@ -2,7 +2,7 @@ import React from "react";
 
 import useFetch from "../../Hooks/useFetch";
 import {COMENTARIO_POST} from "../../api";
-import Erro from "../Erro";
+import Erro from "../Auxiliar/Erro";
 
 import estilos from "../../css/foto/FotoComentariosForm.module.css";
 import Enviar from "../../assets/enviar.svg?react";

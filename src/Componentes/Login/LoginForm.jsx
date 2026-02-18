@@ -5,7 +5,7 @@ import Input from "../Forms/Input";
 import Button from "../Forms/Button";
 import useForm from "../../Hooks/useForm";
 import {UserContext} from "../../UserContext";
-import Erro from "../Erro";
+import Erro from "../Auxiliar/Erro";
 
 import "../../css/App.css";
 import estilos from "../../css/login/loginForm.module.css";

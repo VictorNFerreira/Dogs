@@ -3,8 +3,8 @@ import React from "react";
 import useFetch from "../../Hooks/useFetch";
 import {FOTO_GET} from "../../api";
 import FotoContent from "../Foto/FotoContent";
-import Loading from "../Loading";
-import Erro from "../Erro";
+import Loading from "../Auxiliar/Loading";
+import Erro from "../Auxiliar/Erro";
 
 import estilos from "../../css/feed/feedModal.module.css";
 

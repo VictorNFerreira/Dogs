@@ -6,9 +6,9 @@ import Button from "../Forms/Button";
 import {USER_POST} from "../../api";
 import {UserContext} from "../../UserContext";
 import useFetch from "../../Hooks/useFetch";
+import Erro from "../Auxiliar/Erro";
 
 import "../../css/App.css";
-import Erro from "../Erro";
 
 function LoginCadastro()
 {

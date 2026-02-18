@@ -1,4 +1,5 @@
 import React from "react";
+import {Routes, Route} from "react-router-dom";
 
 import UsuarioHeader from "./UsuarioHeader";
 import Feed from "../Feed/Feed";
@@ -6,7 +7,6 @@ import UsuarioFotoPost from "./UsuarioFotoPost";
 import UsuarioStats from "./UsuarioStats";
 
 import "../../css/App.css";
-import {Routes, Route} from "react-router-dom";
 
 function Usuario()
 {

@@ -3,7 +3,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import FotoComentarios from "./FotoComentarios";
 import {UserContext} from "../../UserContext";
-import FotoDelete from "../../css/foto/FotoDelete";
+import FotoDelete from "./FotoDelete";
 
 import "../../css/App.css"
 import estilos from "../../css/foto/fotoContent.module.css";

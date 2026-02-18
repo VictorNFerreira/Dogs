@@ -1,12 +1,12 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 
 import Input from "../Forms/Input";
 import Button from "../Forms/Button";
 import useForm from "../../Hooks/useForm";
 import useFetch from "../../Hooks/useFetch";
 import {FOTO_POST} from "../../api";
-import Erro from "../Erro";
-import {useNavigate} from "react-router-dom";
+import Erro from "../Auxiliar/Erro";
 
 import estilos from "../../css/usuario/usuarioFotoPost.module.css";
 

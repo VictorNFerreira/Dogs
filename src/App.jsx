@@ -7,9 +7,10 @@ import Login from "./Componentes/Login/Login";
 import Usuario from "./Componentes/Usuario/Usuario";
 import Footer from "./Componentes/Footer";
 import {UserStorage} from "./UserContext";
+import ProtectedRoute from "./Componentes/Auxiliar/ProtectedRoute";
 
 import "./css/App.css";
-import ProtectedRoute from "./Componentes/ProtectedRoute";
+
 
 function App()
 {
