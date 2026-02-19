@@ -8,7 +8,7 @@ import Erro from "../Auxiliar/Erro";
 
 import estilos from "../../css/feed/feedFotos.module.css";
 
-function FeedFotos({setModalFoto})
+function FeedFotos(props)
 {
     const {dados, loading, erro, request} = useFetch();
 
@@ -16,14 +16,16 @@ function FeedFotos({setModalFoto})
     {
         async function fetchFotos()
         {
-            const {url, options} = FOTOS_GET({pagina: 1, total: 6, usuario: 0});
-            await request(url, options);
+            const {url, options} = FOTOS_GET({pagina: props.pagina, total: 6, usuario: props.usuario});
+            const {result, dados} = await request(url, options);
+            if(result && result.ok && dados.length < 6)
+                props.setFinal(true);
 
         }
 
         fetchFotos();
 
-    }, [request]);
+    }, [request, props.pagina, props.usuario, props.setFinal]);
 
     if(loading)
         return <Loading/>
@@ -32,7 +34,7 @@ function FeedFotos({setModalFoto})
     if(dados)
         return <div>
             <ul class={`${estilos.feed} animaLeft`}>
-                {dados.map((dado) => <FeedImagem key={dado.id} foto={dado} setModalFoto={setModalFoto}/>)}
+                {dados.map((dado) => <FeedImagem key={dado.id} foto={dado} setModalFoto={props.setModalFoto}/>)}
             </ul>
         </div>
     return null
