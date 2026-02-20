@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes, { number, string } from "prop-types";
 
 import FeedModal from "./FeedModal";
 import FeedFotos from "./FeedFotos";
@@ -47,6 +48,18 @@ function Feed(props)
         {modalFoto ? <FeedModal foto={modalFoto} setModalFoto={setModalFoto}/> : ""}
         {paginas.map((pagina) => <FeedFotos key={pagina} pagina={pagina} usuario={props.usuario} setModalFoto={setModalFoto} setFinal={setFinal}/>)}
     </section>
+
+}
+
+Feed.propTypes = 
+{
+    usuario: PropTypes.oneOfType([PropTypes.string.isRequired, PropTypes.number.isRequired]),
+
+}
+
+Feed.defaultProps = 
+{
+    usuario: 0
 
 }
 

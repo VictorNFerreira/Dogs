@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import {FOTO_DELETE} from "../../api";
 import useFetch from "../../Hooks/useFetch";
@@ -27,6 +28,12 @@ function FotoDelete(props)
     return <>
         {loading ? <button class={estilos.deletar} disabled>Deletando...</button> : <button class={estilos.deletar} onClick={handleClick}>Deletar</button>}
     </>
+
+}
+
+FotoDelete.propTypes =
+{
+    id: PropTypes.number.isRequired,
 
 }
 

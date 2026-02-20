@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types";
 
 import {UserContext} from "../../UserContext";
 import FotoComentariosForm from "./FotoComentariosForm";
@@ -27,6 +28,13 @@ function FotoComentarios(props)
 
         {login ? <FotoComentariosForm id={props.id} setComentarios={setComentarios} single={props.single}/> : ""}
     </div>
+
+}
+
+FotoComentarios.propTypes =
+{
+    id: PropTypes.number.isRequired,
+    single: PropTypes.bool,
 
 }
 

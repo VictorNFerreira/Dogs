@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-import estilos from "../../css/imagem.module.css";
+import estilos from "../../css/auxiliar/imagem.module.css";
 
 function Imagem(props)
 {
@@ -17,6 +18,13 @@ function Imagem(props)
         {skeleton ? <div class={estilos.skeleton}></div> : ""}
         <img class={estilos.img} src={props.src} alt={props.alt} onLoad={handleLoad} {...props}/>
     </div>
+
+}
+
+Imagem.propTypes =
+{
+    src: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
 
 }
 

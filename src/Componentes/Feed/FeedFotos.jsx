@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import FeedImagem from "./FeedImagem";
 import useFetch from "../../Hooks/useFetch";
@@ -38,6 +39,12 @@ function FeedFotos(props)
             </ul>
         </div>
     return null
+
+}
+
+FeedFotos.propTypes =
+{
+    pagina: PropTypes.number.isRequired,
 
 }
 

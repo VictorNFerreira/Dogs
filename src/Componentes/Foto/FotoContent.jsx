@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import {Link} from "react-router-dom";
 import FotoComentarios from "./FotoComentarios";
@@ -34,6 +35,12 @@ function FotoContent({dados, single})
 
         <FotoComentarios id={dados.photo.id} comentarios={dados.comments} single={single}/>
     </div>
+
+}
+
+FotoContent.propTypes =
+{
+    single: PropTypes.bool,
 
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import useFetch from "../../Hooks/useFetch";
 import {COMENTARIO_POST} from "../../api";
@@ -33,6 +34,13 @@ function FotoComentariosForm(props)
         <button class={estilos.botao}><Enviar/></button>
         {erro ? <Erro erro={erro}/> : ""}
     </form>
+
+}
+
+FotoComentariosForm.propTypes =
+{
+    id: PropTypes.number.isRequired,
+    single: PropTypes.bool,
 
 }
 
