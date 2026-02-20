@@ -17,7 +17,7 @@ function FotoComentarios(props)
 
     }, [comentarios]);
 
-    return <div class={estilos.comentarios} ref={comentariosSecao}>
+    return <div class={`${estilos.comentarios} ${props.single ? estilos.fotoSingle : ""}`} ref={comentariosSecao}>
         <ul class={estilos.comentariosLista}>
             {comentarios.map((comentario) => <li key={comentario.comment_ID}>
                 <span class={estilos.autor}>{comentario.comment_author}:</span>
@@ -25,7 +25,7 @@ function FotoComentarios(props)
             </li>)}
         </ul>
 
-        {login ? <FotoComentariosForm id={props.id} setComentarios={setComentarios}/> : ""}
+        {login ? <FotoComentariosForm id={props.id} setComentarios={setComentarios} single={props.single}/> : ""}
     </div>
 
 }

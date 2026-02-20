@@ -9,11 +9,11 @@ import Imagem from "../Auxiliar/Imagem";
 import "../../css/App.css"
 import estilos from "../../css/foto/fotoContent.module.css";
 
-function FotoContent({dados})
+function FotoContent({dados, single})
 {
     const usuario = React.useContext(UserContext);
 
-    return <div class={estilos.foto}>
+    return <div class={`${estilos.foto} ${single ? estilos.fotoSingle : ""}`}>
         <div class={estilos.img}>
             <Imagem src={dados.photo.src} alt={dados.photo.title}/>
         </div>
@@ -32,7 +32,7 @@ function FotoContent({dados})
             </ul>
         </div>
 
-        <FotoComentarios id={dados.photo.id} comentarios={dados.comments}/>
+        <FotoComentarios id={dados.photo.id} comentarios={dados.comments} single={single}/>
     </div>
 
 }

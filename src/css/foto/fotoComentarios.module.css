@@ -10,6 +10,12 @@
 
 }
 
+.fotoSingle .comentariosLista
+{
+    padding: 0px;
+
+}
+
 .comentariosLista li
 {
     margin-bottom: 8px;

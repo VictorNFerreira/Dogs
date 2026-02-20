@@ -8,9 +8,9 @@ import Usuario from "./Componentes/Usuario/Usuario";
 import Footer from "./Componentes/Footer";
 import {UserStorage} from "./UserContext";
 import ProtectedRoute from "./Componentes/Auxiliar/ProtectedRoute";
+import Foto from "./Componentes/Foto/Foto";
 
 import "./css/App.css";
-
 
 function App()
 {
@@ -22,6 +22,7 @@ function App()
                 <Route path="/" element={<Home/>}/>
                 <Route path="login/*" element={<Login/>}/>
                 <Route path="conta/*" element={<ProtectedRoute><Usuario/></ProtectedRoute>}/>
+                <Route path="foto/:id" element={<Foto/>}/>
             </Routes>
 
             <Footer/>

@@ -14,15 +14,37 @@
 
 }
 
+.fotoSingle.foto
+{
+    grid-template-columns: 1fr;
+    height: auto;
+    border-radius: 0px;
+
+}
+
 .img
 {
     grid-row: 1/-1;
 
 }
 
+.fotoSingle .img
+{
+    grid-row: 1;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+
 .detalhes
 {
     margin: 30px 30px 0px 30px;
+
+}
+
+.fotoSingle .detalhes
+{
+    margin: 15px 0px 0px 0px;
 
 }
 

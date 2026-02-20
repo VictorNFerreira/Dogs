@@ -28,7 +28,7 @@ function FotoComentariosForm(props)
             
     }
 
-    return <form class={estilos.form} onSubmit={hanldeSubmit}>
+    return <form class={`${estilos.form} ${props.single ? estilos.fotoSingle : ""}`} onSubmit={hanldeSubmit}>
         <textarea id="comentario" class={estilos.textarea} name="comentario" placeholder="Comente" value={comentario} onChange={(event) => setComentario(event.target.value)}/>
         <button class={estilos.botao}><Enviar/></button>
         {erro ? <Erro erro={erro}/> : ""}
