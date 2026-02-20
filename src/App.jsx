@@ -5,12 +5,14 @@ import Header from "./Componentes/Header";
 import Home from "./Componentes/Home";
 import Login from "./Componentes/Login/Login";
 import Usuario from "./Componentes/Usuario/Usuario";
+import Foto from "./Componentes/Foto/Foto";
+import UsuarioPerfil from "./Componentes/Usuario/UsuarioPerfil";
 import Footer from "./Componentes/Footer";
 import {UserStorage} from "./UserContext";
 import ProtectedRoute from "./Componentes/Auxiliar/ProtectedRoute";
-import Foto from "./Componentes/Foto/Foto";
 
 import "./css/App.css";
+
 
 function App()
 {
@@ -23,6 +25,7 @@ function App()
                 <Route path="login/*" element={<Login/>}/>
                 <Route path="conta/*" element={<ProtectedRoute><Usuario/></ProtectedRoute>}/>
                 <Route path="foto/:id" element={<Foto/>}/>
+                <Route path="perfil/:usuario" element={<UsuarioPerfil/>}/>
             </Routes>
 
             <Footer/>
