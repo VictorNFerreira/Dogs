@@ -8,11 +8,11 @@ import Usuario from "./Componentes/Usuario/Usuario";
 import Foto from "./Componentes/Foto/Foto";
 import UsuarioPerfil from "./Componentes/Usuario/UsuarioPerfil";
 import Footer from "./Componentes/Footer";
+import NotFound from "./Componentes/NotFound";
 import {UserStorage} from "./UserContext";
 import ProtectedRoute from "./Componentes/Auxiliar/ProtectedRoute";
 
 import "./css/App.css";
-
 
 function App()
 {
@@ -26,6 +26,7 @@ function App()
                 <Route path="conta/*" element={<ProtectedRoute><Usuario/></ProtectedRoute>}/>
                 <Route path="foto/:id" element={<Foto/>}/>
                 <Route path="perfil/:usuario" element={<UsuarioPerfil/>}/>
+                <Route path="*" element={<NotFound/>}/>
             </Routes>
 
             <Footer/>

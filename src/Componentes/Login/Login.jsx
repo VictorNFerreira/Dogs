@@ -5,6 +5,7 @@ import LoginForm from "./LoginForm";
 import LoginCadastro from "./LoginCadastro";
 import LoginPerdeuSenha from "./LoginPerdeuSenha";
 import LoginRedefinirSenha from "./LoginRedefinirSenha";
+import NotFound from "../NotFound";
 import {UserContext} from "../../UserContext";
 
 import estilos from "../../css/login/login.module.css";
@@ -24,6 +25,7 @@ function Login()
                 <Route path="cadastro" element={<LoginCadastro/>}/>
                 <Route path="recuperacao" element={<LoginPerdeuSenha/>}/>
                 <Route path="redefinicao" element={<LoginRedefinirSenha/>}/>
+                <Route path="*" element={<NotFound/>}/>
             </Routes>
         </div>
     </main>

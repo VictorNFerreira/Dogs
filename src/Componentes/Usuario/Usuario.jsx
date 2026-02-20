@@ -5,6 +5,7 @@ import UsuarioHeader from "./UsuarioHeader";
 import Feed from "../Feed/Feed";
 import UsuarioFotoPost from "./UsuarioFotoPost";
 import UsuarioStats from "./UsuarioStats";
+import NotFound from "../NotFound";
 import {UserContext} from "../../UserContext";
 
 import "../../css/App.css";
@@ -20,6 +21,7 @@ function Usuario()
             <Route path="/" element={<Feed usuario={dados.id}/>}/>
             <Route path="postar" element={<UsuarioFotoPost/>}/>
             <Route path="estatisticas" element={<UsuarioStats/>}/>
+            <Route path="*" element={<NotFound/>}/>
         </Routes>
     </main>
 
