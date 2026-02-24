@@ -6,6 +6,7 @@ import {FOTO_GET} from "../../api";
 import FotoContent from "./FotoContent";
 import Loading from "../Auxiliar/Loading";
 import Erro from "../Auxiliar/Erro";
+import Head from "../Auxiliar/Head";
 
 import "../../css/App.css";
 
@@ -22,6 +23,7 @@ function Foto()
     }, [id, request]);
 
     return <main class="container" style={{marginTop: "30px"}}>
+        {dados ? <Head title={`Dogs | ${dados.photo.title}`} description={`Foto de ${dados.photo.title} no site Dogs`}/> : ""}
         {dados ? <FotoContent dados={dados} single={true}/> : ""}
         {loading ? <Loading/> : ""}
         {erro ? <Erro erro={erro}/> : ""}

@@ -7,6 +7,7 @@ import {REDEFINIR_SENHA} from "../../api";
 import Input from "../Forms/Input";
 import Button from "../Forms/Button";
 import Erro from "../Auxiliar/Erro";
+import Head from "../Auxiliar/Head";
 
 import "../../css/App.css";
 
@@ -46,6 +47,7 @@ function LoginRedefinirSenha()
     }
 
     return <section>
+        <Head title="Dogs | Redefina sua senha" description="Redefina sua senha e entre novamente em sua conta no site Dogs"/>
         <h1 class="titulo">Redefinir Senha</h1>
 
         <form onSubmit={handleSubmit}>

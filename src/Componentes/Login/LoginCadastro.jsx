@@ -7,6 +7,7 @@ import {USER_POST} from "../../api";
 import {UserContext} from "../../UserContext";
 import useFetch from "../../Hooks/useFetch";
 import Erro from "../Auxiliar/Erro";
+import Head from "../Auxiliar/Head";
 
 import "../../css/App.css";
 
@@ -34,6 +35,7 @@ function LoginCadastro()
     }
 
     return <section class="animaLeft">
+        <Head title="Dogs | Crie sua conta" description="Crie sua conta e compartilhe fotos no site Dogs"/>
         <h1 class="titulo">Cadastre-se</h1>
 
         <form onSubmit={handleSubmit}>

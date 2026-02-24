@@ -7,6 +7,7 @@ import useForm from "../../Hooks/useForm";
 import useFetch from "../../Hooks/useFetch";
 import {FOTO_POST} from "../../api";
 import Erro from "../Auxiliar/Erro";
+import Head from "../Auxiliar/Head";
 
 import estilos from "../../css/usuario/usuarioFotoPost.module.css";
 
@@ -53,6 +54,7 @@ function UsuarioFotoPost()
     }
 
     return <section class={`${estilos.fotoPost} animaLeft`}>
+        <Head title="Dogs | Poste uma foto" description="Poste uma foto e compartilhe ela no feed do site Dogs"/>
         <form onSubmit={handleSubmit}>
             <Input label="Nome" type="text" name="nome" {...nome}/>
             <Input label="Peso" type="text" name="peso" {...peso}/>

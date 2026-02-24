@@ -7,6 +7,7 @@ import UsuarioFotoPost from "./UsuarioFotoPost";
 import UsuarioStats from "./UsuarioStats";
 import NotFound from "../NotFound";
 import {UserContext} from "../../UserContext";
+import Head from "../Auxiliar/Head";
 
 import "../../css/App.css";
 
@@ -15,6 +16,7 @@ function Usuario()
     const {dados} = React.useContext(UserContext);
 
     return <main class="container">
+        <Head title="Dogs | Minha conta" description="A sua conta e suas fotos no site Dogs"/>
         <UsuarioHeader></UsuarioHeader>
 
         <Routes>

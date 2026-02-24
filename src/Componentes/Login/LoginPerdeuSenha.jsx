@@ -6,6 +6,7 @@ import {RECUPERAR_SENHA} from "../../api";
 import Input from "../Forms/Input";
 import Button from "../Forms/Button";
 import Erro from "../Auxiliar/Erro";
+import Head from "../Auxiliar/Head";
 
 import "../../css/App.css";
 
@@ -27,6 +28,7 @@ function LoginPerdeuSenha()
     }
 
     return <section class="animaLeft">
+        <Head title="Dogs | Perdeu a senha" description="Perdeu a senha da sua conta no site Dogs?"/>
         <h1 class="titulo">Perdeu a Senha?</h1>
 
         {dados ? <p style={{color: "#44cc11"}}>{dados}</p> : <form onSubmit={handleSubmit}>

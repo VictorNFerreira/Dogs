@@ -6,6 +6,7 @@ import Button from "../Forms/Button";
 import useForm from "../../Hooks/useForm";
 import {UserContext} from "../../UserContext";
 import Erro from "../Auxiliar/Erro";
+import Head from "../Auxiliar/Head";
 
 import "../../css/App.css";
 import estilos from "../../css/login/loginForm.module.css";
@@ -26,6 +27,7 @@ function LoginForm()
     }
 
     return <section class="animaLeft">
+        <Head title="Dogs | Login" description="Página de login do site Dogs"/>
         <h1 class="titulo">Login</h1>
 
         <form class={estilos.formulario} onSubmit={handleSubmit}>
