@@ -40,6 +40,20 @@ button, input
 
 }
 
+.app
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 110vh;
+
+}
+
+.appBody
+{
+    flex: 1;
+
+}
+
 .container
 {
     max-width: 900px;
