@@ -5,7 +5,7 @@ import useFetch from "../../Hooks/useFetch";
 import {GET_STATS} from "../../api";
 import Loading from "../Auxiliar/Loading";
 import Erro from "../Auxiliar/Erro";
-import UsuarioStatsGraficos from "./UsuarioStatsGraficos";
+const UsuarioStatsGraficos = React.lazy(() => import("./UsuarioStatsGraficos"));
 
 import "../../css/App.css";
 
@@ -33,8 +33,10 @@ function UsuarioStats()
         return <Erro erro={erro}/>
     if(dados)
         return <section class="animaLeft">
-            <Head title="Dogs | Estatísticas" description="Estatísticas do seu perfil, para ver como você está se saindo no site Dogs"/>
-            <UsuarioStatsGraficos dados={dados}/>
+            <React.Suspense fallback={<div></div>}>
+                <Head title="Dogs | Estatísticas" description="Estatísticas do seu perfil, para ver como você está se saindo no site Dogs"/>
+                <UsuarioStatsGraficos dados={dados}/>
+            </React.Suspense>
         </section>
     return null
 
