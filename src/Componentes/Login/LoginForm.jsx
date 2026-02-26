@@ -35,7 +35,7 @@ function LoginForm()
             <Input label="Senha" type="password" name="senha" {...senha}/>
 
             {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
-            {erro ? <Erro erro={erro}/> : ""}
+            {erro ? <Erro erro="Usuário ou senha incorretos"/> : ""}
         </form>
 
         <Link class={estilos.recuperacaoSenha} to="/login/recuperacao">Perdeu a senha?</Link>

@@ -29,3 +29,13 @@
     padding-bottom: 100%;
 
 }
+
+@media(max-width: 800px)
+{
+    .fotoPost
+    {
+        grid-template-columns: 1fr;
+
+    }
+
+}

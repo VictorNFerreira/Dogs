@@ -46,7 +46,7 @@ function LoginRedefinirSenha()
 
     }
 
-    return <section>
+    return <section class="animaLeft">
         <Head title="Dogs | Redefina sua senha" description="Redefina sua senha e entre novamente em sua conta no site Dogs"/>
         <h1 class="titulo">Redefinir Senha</h1>
 
